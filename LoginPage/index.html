@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns="http://www.w3.org/1999/html">
+<head>
+  <!-- Polish letters -->
+  <meta charset="UTF-8">
+  <!-- compatibility with mobile device-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First page</title>
+  <link rel="stylesheet"  href="loginWindow.css">
+</head>
+
+<body>
+    <div id="wrapper">
+      <header class="img_size">
+        <img src="../png/widoczek.jpg" alt="The view"/>
+      </header>
+      <nav>  <!-- our navigation bar -->
+        <a class="menu active" href="index.html">Login</a> <!-- showing this page when it's active (after press button) -->
+        <a class="menu" href="../FilterPage/Filter.html">Filter</a>
+        <a class="menu" href="../ColorMode/ColorMode.html">Color mode</a>
+      </nav>
+
+      <div class="container"> <!-- container for login window -->
+        <form action="" class="form" id="login">  <!-- form for sing up window, empty action because nothing process data from form -->
+        <h1 class="form_title">Login</h1>
+        <div class="form_message form_message_error"></div>
+        <div class="form_input_group">
+          <input type="text" class="form_input" placeholder="Username or email">
+          <div class="form_input_error_message"></div>
+        </div>
+        <div class="form_input_group">
+          <input type="password" class="form_input" placeholder="Password">
+          <div class="form_input_error"></div>
+        </div>
+        <button class="form_button" type="submit">Continue</button>
+        <p class="form_text">
+          <a href="#" class="form_link">Forgot your password?</a>
+        </p>
+        <p class="form_text">
+          <a class="form_link" href="" id="linkCreateAccount">Don't have an account? Create account</a>
+        </p>
+        </form>
+        <form action="" class="form form_hidden" id="createAccount">  <!-- form for register window -->
+          <h1 class="form_title">Create Account</h1>
+          <div class="form_message form_message_error"></div>
+          <div class="form_input_group">
+            <input type="text" id="singUsername" class="form_input" placeholder="Username">
+            <div class="form_input_error_message"></div>
+          </div>
+          <div class="form_input_group">
+            <input type="text" class="form_input" placeholder="Email">
+            <div class="form_input_error_message"></div>
+          </div>
+          <div class="form_input_group">
+            <input type="password" class="form_input" placeholder="Password">
+            <div class="form_input_error"></div>
+          </div>
+          <div class="form_input_group">
+            <input type="password" class="form_input" placeholder="Repeat password">
+            <div class="form_input_error"></div>
+          </div>
+          <button class="form_button" type="submit">Create</button>
+          <p class="form_text">
+            <a class="form_link" href="" id="linkLogin">Already have an account? Sign in</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  <script src="loginWindow.js"></script>  <!-- js file route -->
+</body>
+</html>

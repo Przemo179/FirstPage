@@ -1,0 +1,91 @@
+* {
+    margin : 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+    /*   border-box określa szerkość naszej strony  - dodanie tego definiuje wymiary maksymalne, UWAGA - marginesy nie są liczone do border-boxa*/
+}
+/* gwiazdka oznacza, że chcemy odnosić się do wszystkiego body, head, img, itd. */
+
+body  {
+    background-color: #b3d4fc;
+}
+
+#wrapper {
+    max-width:1600px;
+    height: 500px;
+    margin: 0 5% 0 5%;
+    background-color: #cccccc;
+}
+
+body header img {
+    width: 100%;
+    display: block;
+    height: 550px;
+}
+
+nav {
+    background-color: darkcyan;
+    overflow: hidden;   /* będzie miał wymiary takie jakie mają jego "dzieci" czyli kiedy elementy w nav przekroczą wartość wysokości to będą ukryte */
+}
+@media (max-width: 800px) {
+    nav a {
+        width: 50%;
+    }
+}
+
+a.menu {
+    display: inline-block;
+    width: 33.1%;
+    padding: 15px 30px 15px 30px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;    /* deklarujemy w elementcie, który zmieniamy. płynniejsze przejścia w navigation */
+}
+/* hover - określa jak ma zachować się element, gdy się na niego najedzie */
+a.menu:hover {
+    background-color: wheat;
+}
+
+.active {
+    background-color: wheat;
+    color: black;
+}
+
+h2  {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+/* css for filter list */
+#userInput  {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myUL   {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#myUL li a  {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block
+}
+#myUL li a:hover:not(.header) {
+    background-color: #eee;
+}
+.filter1 {
+    height: 500px;
+}

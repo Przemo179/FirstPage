@@ -1,0 +1,179 @@
+
+* {
+    margin : 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+
+    /*   border-box określa szerkość naszej strony  - dodanie tego definiuje wymiary maksymalne, UWAGA - marginesy nie są liczone do border-boxa*/
+}
+
+body  {
+    --color_primary: #b3d4fc;
+    --color_primary-dark: #007f67;
+    --color_secondary:  blue;
+    --color_error: red;
+    --color_succes: green;
+    --border-radius: 4px;
+    background: var(--color_primary);
+}
+
+#wrapper {
+    max-width:1600px;
+    margin: 0 5% 0 5%;
+    background-color: #cccccc;
+
+}
+
+body header img {
+    width: 100%;
+    display: block;
+    height: 550px;
+}
+
+@media (max-width: 800px) {
+    nav a {
+        width: 50%;
+    }
+}
+
+nav {
+    background-color: darkcyan;
+    overflow: hidden;   /* będzie miał wymiary takie jakie mają jego "dzieci" czyli kiedy elementy w nav przekroczą wartość wysokości to będą ukryte */
+}
+
+a.menu {
+    display: inline-block;
+    width: 33.1%;
+    padding: 15px 30px 15px 30px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;    /* deklarujemy w elementcie, który zmieniamy. płynniejsze przejścia w navigation */
+}
+
+a.menu:hover {
+    background-color: wheat;
+}
+
+.active {
+    background-color: wheat;
+}
+
+.container {
+    width: 300px;
+    max-width: 300px;
+    margin: 1rem;
+    padding: 2rem; 
+    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+    border-radius: var(--border-radius);
+    background-color: white;
+}
+
+/* form styles */
+.form_input,
+.form_button {
+    font: 500 1rem 'Quicksand', sans-serif;
+}
+
+.form_hidden    {
+    display: none;
+}
+
+.form > *:first-child {
+    margin-top: 0;
+}
+
+.form > *:last-child {
+    margin-top: 0;
+}
+
+.form_title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form_message {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form_message_success   {
+    color: var(--color_succes);
+}
+
+.form_message_error {
+    color: var(--color_error);
+}
+
+
+/* form inputs  */
+.form_input_group {
+    margin-bottom: 1rem;
+}
+
+.form_input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    outline: none;
+    background-color: #b3d4fc;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.form_input:focus {
+    border-color: var(--color_primary);
+    background-color: white;
+}
+
+.form_input_error {
+    color: var(--color_error);
+    border-color: var(--color_error);
+}
+
+.form_input_error_message   {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color_error);
+}
+
+.form_button    {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color_primary);
+}
+
+.form_button:hover  {
+    background: var(--color_primary-dark);
+}
+
+.form_button:active {
+    transform: scale(0.98);
+}
+
+.form_text  {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form_link  {
+    color: var(--color_secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form_link:hover   {
+    text-decoration:    underline ;
+}
+

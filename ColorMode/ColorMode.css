@@ -1,0 +1,159 @@
+* {
+    margin : 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+    /*   border-box określa szerkość naszej strony  - dodanie tego definiuje wymiary maksymalne, UWAGA - marginesy nie są liczone do border-boxa*/
+}
+/* gwiazdka oznacza, że chcemy odnosić się do wszystkiego body, head, img, itd. */
+
+#wrapper {
+    max-width:1600px;
+    margin: 0 5% 0 5%;
+}
+
+body  {
+    font-family: helvetica;
+    background: #b3d4fc;
+    color: #000000;
+}
+
+body header img {
+    width: 100%;
+    display: block;
+    height: 550px;
+}
+
+nav {
+    background-color: darkcyan;
+    overflow: hidden;   /* będzie miał wymiary takie jakie mają jego "dzieci" czyli kiedy elementy w nav przekroczą wartość wysokości to będą ukryte */
+}
+
+a.menu {
+    display: inline-block;
+    width: 33.1%;
+    padding: 15px 30px 15px 30px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;    /* deklarujemy w elementcie, który zmieniamy. płynniejsze przejścia w navigation */
+}
+
+a.menu:hover {
+    background-color: wheat;
+}
+
+.active {
+    background-color: wheat;
+    color: black;
+}
+/* hover - określa jak ma zachować się element, gdy się na niego najedzie */
+
+.dropdown {
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+    padding: 20px;
+    top: -20px;
+    border-radius: 2px;
+    transition: all 0.5s;
+    transform: translateY(100px);
+    will-change: opacity;
+    display: none;
+  }
+
+.trigger-enter .dropdown {
+    display: block;
+  }
+
+.trigger-enter-active .dropdown {
+    opacity: 1;
+  }
+  
+.dropdownBackground {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+    transition: all 0.3s, opacity 0.1s, transform 0.2s;
+    transform-origin: 50% 0;
+    display: flex;
+    justify-content: center;
+    opacity:0;
+  }
+
+.dropdownBackground.open {
+    opacity: 1;
+  }
+
+.arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: white;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+article {
+    margin-top: 30px;
+    margin-bottom : 20px;
+    padding: 0 20px;
+}
+
+img.left {
+     float:left;
+     margin: 0 10px 10px 0;
+     width: 25%;
+     border-radius: 50% 30%;
+ }
+
+article p {
+    font-family: helvetica;
+    text-align: justify;
+    line-height: 25px;
+    font-size: 20px;
+    padding: 15px 0;
+    display: inline;
+}
+
+footer {
+    height: 40px;
+    background-color: deepskyblue;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.pointedWords {
+    text-decoration: none;
+    background: rgba(0,0,0, 0.2);
+    color: black;
+    border-radius: 20px;
+}
+
+
+
+/* google analitycs - fajne urządzneie - pokazuje dane strony (ilość odwiedzin itp.) */
+/* @media najlepiej dawać na końcu bo będzie brane pod uwagę w ostatniej kolejności - będzie miał "pierwszeństwo" */
+
+.highlight {
+    transition: all 0.2s;
+    border-bottom: 2px solid white;
+    position: absolute;
+    top: 0;
+    background: white;
+    left: 0;
+    z-index: -1;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+
+  
